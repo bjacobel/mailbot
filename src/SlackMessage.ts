@@ -1,6 +1,8 @@
 import { ChatPostMessageArguments } from "@slack/client";
 import { EmailAddress, HeaderValue } from "mailparser";
 
+import log from "./utils/log";
+
 export type Headers = Map<string, string | HeaderValue>;
 
 export default class SlackMessage {
@@ -19,6 +21,11 @@ export default class SlackMessage {
       channel: "",
       text: this.body, // todo: transform html to markdown
     };
+  }
+
+  public async send(): Promise<void> {
+    const args = await this.composeMessage();
+    log.info(JSON.stringify(args));
   }
 
   public fullname(): string {

@@ -1,6 +1,6 @@
 import { DecryptRequest, DecryptResponse } from "aws-sdk/clients/kms";
 
-// tslint:disable-next-line no-empty
+// eslint-disable-next-line
 function KMS() {}
 
 KMS.prototype.decrypt = jest.fn(

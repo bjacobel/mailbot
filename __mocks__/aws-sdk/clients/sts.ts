@@ -1,7 +1,8 @@
 import { GetCallerIdentityResponse } from "aws-sdk/clients/sts";
 
-// tslint:disable-next-line no-empty
+// eslint-disable-next-line
 function STS() {}
+
 STS.prototype.getCallerIdentity = jest.fn(
   (
     params: {},

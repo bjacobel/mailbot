@@ -6,7 +6,7 @@ export default (): Transform => {
     data,
     encoding,
     callback: (err: Error | undefined, html?: string) => void,
-  ) => {
+  ): void => {
     if (data.type === "text") {
       callback(undefined, data.html);
     } else {

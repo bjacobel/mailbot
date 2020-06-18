@@ -13,10 +13,11 @@ export default (Bucket: string, Key: string): Readable => {
   let metadata = {};
 
   const enrichWithHeaders = new Transform({ objectMode: true });
-  enrichWithHeaders._transform = (data, encoding, callback) => {
+  enrichWithHeaders._transform = (data, encoding, callback): void => {
     callback(undefined, { headers: metadata, body: data } as Message);
   };
 
+  // eslint-disable-next-line
   let result: Readable;
 
   const s3stream: Readable = s3

@@ -25,7 +25,6 @@ describe("receive function handler", () => {
     });
 
     it("creates a SlackMessage with the proper constructor args", async () => {
-      // @ts-ignore 2332
       await receive(mail);
 
       expect(SlackMessage.prototype.constructor).toHaveBeenCalledWith(

@@ -14,7 +14,7 @@ describe("receive function handler", () => {
     beforeEach(() => {
       content = "email body content";
       streamSource = new Readable({ objectMode: true });
-      streamSource._read = () => {
+      streamSource._read = (): void => {
         streamSource.push({ type: "text", html: content });
         streamSource.push(null);
       };

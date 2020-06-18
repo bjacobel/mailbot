@@ -24,12 +24,11 @@ export const decrypt = (
       throw new Error(`algorithm ${algo} is not supported`);
   }
 
-  // @ts-ignore 2739
-  const decipher: crypto.DecipherGCM = crypto.createDecipheriv(
+  const decipher = crypto.createDecipheriv(
     nodeCryptoAlgo,
     key,
     iv,
-  );
+  ) as crypto.DecipherGCM;
   decipher.setAuthTag(tag);
 
   return Buffer.concat([decipher.update(body), decipher.final()]);
@@ -39,7 +38,7 @@ export const separateTag = (
   bodyWithTag: Buffer,
   contentLen: string,
   tagLen: string, // this is BITS not BYTES
-) => {
+): Buffer[] => {
   // length of data.body should be content_len + tag_len
   const contentEnd: number = parseInt(contentLen, 10);
   const contentRange: number[] = [0, contentEnd];

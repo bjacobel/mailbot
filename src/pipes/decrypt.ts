@@ -1,12 +1,11 @@
 import * as KMS from "aws-sdk/clients/kms";
-import { SESMessage } from "aws-sdk/clients/ses";
 import { Transform } from "stream";
 
 import { HEADER } from "../constants";
 import { decrypt, JavaCryptoAlgos, separateTag } from "../utils/crypto";
 import { Message } from "./download";
 
-export default (message: SESMessage): Transform => {
+export default (): Transform => {
   const trs = new Transform({ objectMode: true });
   const kms = new KMS();
 
@@ -14,13 +13,13 @@ export default (message: SESMessage): Transform => {
     data: Message,
     encoding,
     callback: (err: Error | undefined, decryptedBody: Buffer) => void,
-  ) => {
-    const CiphertextBlob = Buffer.from(data.headers[HEADER.KEY]!, "base64");
+  ): void => {
+    const CiphertextBlob = Buffer.from(data.headers[HEADER.KEY], "base64");
     kms.decrypt(
       {
         CiphertextBlob,
         EncryptionContext: JSON.parse(
-          data.headers[HEADER.MATSEC]!,
+          data.headers[HEADER.MATSEC],
         ) as KMS.EncryptionContextType,
       },
       (err: Error, kmsData: KMS.DecryptResponse) => {
@@ -35,9 +34,9 @@ export default (message: SESMessage): Transform => {
           callback(
             undefined,
             decrypt(
-              kmsData.Plaintext! as Buffer,
-              Buffer.from(data.headers[HEADER.IV]!, "base64"),
-              data.headers[HEADER.ALGO]! as JavaCryptoAlgos,
+              kmsData.Plaintext as Buffer,
+              Buffer.from(data.headers[HEADER.IV], "base64"),
+              data.headers[HEADER.ALGO] as JavaCryptoAlgos,
               unencryptedBody,
               tag,
             ),

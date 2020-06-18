@@ -1,5 +1,6 @@
 import * as S3 from "aws-sdk/clients/s3";
 import { Readable } from "stream";
+import { mocked } from "ts-jest/utils";
 
 import download from "../download";
 
@@ -22,10 +23,11 @@ describe("download pipe", () => {
 
   it("catches the issue when getObject fails before the stream transform", (done) => {
     const accessDenied = new Error("AccessDenied");
-    // @ts-ignore TS2339
-    S3.prototype.createReadStream.mockImplementationOnce(() => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore 2339
+    mocked(S3.prototype.createReadStream).mockImplementationOnce(() => {
       const readStream = new Readable();
-      readStream._read = () => {
+      readStream._read = (): void => {
         readStream.emit("error", accessDenied);
       };
       return readStream;
@@ -42,10 +44,12 @@ describe("download pipe", () => {
       "x-amz-meta-hello": "goodbye",
     };
 
-    // @ts-ignore T2339
-    S3.prototype.getObject.mockImplementationOnce(() => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore 2345
+    mocked(S3.prototype.getObject).mockImplementationOnce(() => {
       process.nextTick(() => {
-        // @ts-ignore T2339
+        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+        // @ts-ignore 2339
         S3.prototype.emit("httpHeaders", 200, headers);
       });
       return S3.prototype;

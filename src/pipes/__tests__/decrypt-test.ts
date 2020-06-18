@@ -21,7 +21,7 @@ describe("decrypt pipe", () => {
 
   beforeEach(() => {
     streamSource = new Readable({ objectMode: true });
-    streamSource._read = () => {
+    streamSource._read = (): void => {
       streamSource.push({
         body: Buffer.from("encrypted content", "utf-8"),
         headers: {
@@ -39,17 +39,17 @@ describe("decrypt pipe", () => {
   });
 
   it("returns a transform stream", (done) => {
-    const transformer = decrypt(message);
+    const transformer = decrypt();
     expect(transformer).toBeInstanceOf(Transform);
-    streamSource.pipe(transformer).on("data", (data: any) => {
+    streamSource.pipe(transformer).on("data", (data) => {
       expect(data).not.toBeNull();
       done();
     });
   });
 
   it("decrypts the kms header key from the headers", (done) => {
-    const transformer = decrypt(message);
-    streamSource.pipe(transformer).on("data", (data: any) => {
+    const transformer = decrypt();
+    streamSource.pipe(transformer).on("data", () => {
       expect(KMS.prototype.decrypt).toHaveBeenCalledWith(
         expect.objectContaining({
           CiphertextBlob: Buffer.from("encryption key", "base64"),

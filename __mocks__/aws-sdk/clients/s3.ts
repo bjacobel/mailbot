@@ -5,8 +5,9 @@ import { inherits } from "util";
 
 import { HEADER } from "../../../src/constants";
 
-const S3 = function () {
-  // @ts-ignore TS2683
+const S3 = function (): void {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+  // @ts-ignore 2683
   EventEmitter.call(this);
 };
 inherits(S3, EventEmitter);
@@ -24,10 +25,11 @@ S3.prototype.getObject = jest.fn(() => {
   });
   return S3.prototype;
 });
+
 S3.prototype.createReadStream = jest.fn(
   (): Readable => {
     const readStream = new Readable();
-    readStream._read = () => {
+    readStream._read = (): void => {
       readStream.push("email body content" as GetObjectOutput["Body"]);
       readStream.push(null);
     };

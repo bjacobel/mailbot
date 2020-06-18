@@ -8,7 +8,9 @@ import extract from "./pipes/extract";
 import SlackMessage from "./SlackMessage";
 import log from "./utils/log";
 
-export default async (event: EmailEventSNSNotification) => {
+export default async (
+  event: EmailEventSNSNotification,
+): Promise<void | Error> => {
   try {
     const message: SESMessage = JSON.parse(event.Records[0].Sns.Message);
     const headerArray: ReadonlyArray<[
@@ -20,7 +22,7 @@ export default async (event: EmailEventSNSNotification) => {
     const chunks: string[] = [];
     const bodyEmitter = await pipeline(
       await download(bucketName, objectKey),
-      decrypt(message),
+      decrypt(),
       new MailParser(),
       extract(),
       (err) => {
@@ -40,7 +42,7 @@ export default async (event: EmailEventSNSNotification) => {
     });
 
     const slackMessage = new SlackMessage(emailHtml, headerMap);
-    return slackMessage;
+    return slackMessage.send();
   } catch (e) {
     log.info(JSON.stringify(event));
     log.error(e);

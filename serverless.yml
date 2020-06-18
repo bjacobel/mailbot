@@ -6,6 +6,8 @@ provider:
   runtime: nsolid
   environment:
     LOG_LEVEL: info
+  iamRoleStatements: ${file(./cfn/iamRoleStatements.yml)}
+  variableSyntax: "\\${((?!AWS)[ ~:a-zA-Z0-9._@'\",\\-\\/\\(\\)]+?)}"
 package:
   individually: true
   include:
@@ -18,13 +20,16 @@ plugins:
   - serverless-dotenv-plugin
   - serverless-nsolid-plugin
 functions:
-  main:
+  receive:
     memorySize: 128
-    handler: src/main.default
+    handler: src/receive.default
+    events:
+      - sns:
+          arn: !Ref EmailUploadedTopic
+          topicName: uvdsa-announce-bot-receive-${self:provider.stage}
 
 resources:
   - ${file(./cfn/cfnSesProvider.yml)}
-  - ${file(./cfn/dns.yml)}
   - ${file(./cfn/sesToLambda.yml)}
 
 custom:

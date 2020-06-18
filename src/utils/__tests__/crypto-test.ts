@@ -16,7 +16,6 @@ describe("decryption helper", () => {
 
       unencryptedBody = Buffer.from("the body", "utf-8");
 
-      // @ts-ignore 2739
       const cipher: crypto.CipherGCM = crypto.createCipheriv(
         "aes-256-gcm",
         key,
