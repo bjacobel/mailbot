@@ -1,0 +1,80 @@
+Resources:
+  NotificationReceiveRule:
+    DependsOn:
+      - S3WritePermissions
+      - EmailEncryptionKey
+    Type: AWS::SES::ReceiptRule
+    Properties:
+      RuleSetName: !ImportValue DefaultRuleSetId  # Managed in another stack
+      Rule:
+        ScanEnabled: true
+        Recipients:
+          - ${self:custom.domain}
+        Actions:
+          - S3Action:
+              BucketName: !Ref EmailHTMLBucket
+              KmsKeyArn: !GetAtt EmailEncryptionKey.Arn
+              TopicArn: !Ref EmailUploadedTopic
+        Enabled: true
+        Name: uvdsa-announce-bot-${self:provider.stage}
+  EmailEncryptionKey:
+    Type: AWS::KMS::Key
+    Properties:
+      Description: encrypt emails in the ${self:provider.stage} uvdsa-announce-bot bucket at rest
+      Enabled: true
+      KeyPolicy:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: Allow administration by root account
+            Effect: Allow
+            Principal:
+              AWS: !Sub arn:aws:iam::${AWS::AccountId}:root
+            Action: kms:*
+            Resource: "*"
+          - Sid: Allow Lambda access for email decryption
+            Effect: Allow
+            Action:
+              - kms:Decrypt
+            Resource: "*"
+            Principal:
+              AWS: !GetAtt LambdaRole.Arn  # @TODO: Per-function roles
+          - Sid: Allow SES to encrypt messages
+            Effect: Allow
+            Principal:
+              Service: ses.amazonaws.com
+            Action:
+              - kms:Encrypt
+              - kms:GenerateDataKey*
+            Resource: "*"
+            Condition:
+              "Null":
+                kms:EncryptionContext:aws:ses:rule-name: false
+                kms:EncryptionContext:aws:ses:message-id: false
+              StringEquals:
+                kms:EncryptionContext:aws:ses:source-account: !Sub "${AWS::AccountId}"
+  EmailEncryptionKeyAlias:
+    Type: AWS::KMS::Alias
+    Properties:
+      AliasName: alias/uvdsa-announce-bot-${self:provider.stage}-email-encryptor
+      TargetKeyId: !Ref EmailEncryptionKey
+  EmailHTMLBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: uvdsa-announce-bot-${self:provider.stage}-emails
+  EmailUploadedTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: uvdsa-announce-bot ${self:provider.stage} topic for email upload notifications
+      TopicName: uvdsa-announce-bot-receive-${self:provider.stage}
+  S3WritePermissions:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref EmailHTMLBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+            Effect: Allow
+            Action: s3:PutObject
+            Resource: !Join ["/", [!GetAtt EmailHTMLBucket.Arn, "*"]]
+            Principal:
+              Service: ses.amazonaws.com

@@ -1,0 +1,770 @@
+Original Message
+Message ID	<CAG8Zg4H+NhjrvM31-V4s-c9zbmj+wS570qA_jEy_Cf1aW+9z6Q@mail.gmail.com>
+Created at:	Fri, Jun 12, 2020 at 5:00 PM (Delivered after 14 seconds)
+From:	UpperValley DSA <uppervalleydsa@gmail.com>
+To:	upper-valley-dsa-bulletins@googlegroups.com
+Subject:	Next DSA Meet-Up and More in the Coming Week for Social Justice
+SPF:	PASS with IP 209.85.220.55 Learn more
+DKIM:	'PASS' with domain gmail.com Learn more
+DMARC:	'PASS' Learn more
+
+
+Download Original	Copy to clipboard	
+Delivered-To: bjacobel@gmail.com
+Received: by 2002:ac8:3617:0:0:0:0:0 with SMTP id m23csp723358qtb;
+        Fri, 12 Jun 2020 14:00:51 -0700 (PDT)
+X-Received: by 2002:adf:ed87:: with SMTP id c7mr16750179wro.108.1591995650860;
+        Fri, 12 Jun 2020 14:00:50 -0700 (PDT)
+ARC-Seal: i=3; a=rsa-sha256; t=1591995650; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=oi1GRvJVgICohcOWn14Yca36zLKAzPQ5cVXDBMKMcdEvXEMBTqyte5cvrZIa1sbLYo
+         1gVFGoNg44FppTHmnPJslc77ffBv0d/uOtRQfVZnSiCMnVnmd6zXjjaXXIEUGtWn3E3W
+         hBcgYLoEFsp8/oSFB/kMWpM6ugXNLeCz23GSXkf+mYCVtRrICpunj+fpIV16DIJwuLLE
+         WxZ6SnsfqqzcF/h6syC/4HZ/Xo/dgClHPbbsfb5Cb7HxFP+Y7jGP0j5pYQn7LghSNguK
+         E4z+/YHl7x8f60JxUHD88fBw6R8RAEYN93HABmn8eqweMprR85UvHIW2cqTFxROH8OLh
+         8BzA==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:to:subject:message-id:date:from
+         :mime-version:sender:dkim-signature:dkim-signature;
+        bh=1hS+Z90BdGlVk7Kyug+089FL/ULyHXDNU/DUBaraLL0=;
+        b=e6WHugYasTAZvt/7XaN4x3TIoR6aYwN9PjvjEamXQQGR0APEEVV+TZWSsOQ4K4vX5K
+         7TAFC7uyCZD1ZUuWhsqFDPI7NPoFmBhUBtdLYCNh/qWw+RE6iN6MjwlwhNR4GPTu8kJ6
+         7PcUlTr6wGuWdcL8ZKIj28oLmAX+SPyR1rBXCkF5xvJtA0RlBJIy8FcoO1Yf5RC+2d/l
+         H58SpOYtoD9cGtVLvdHvdtvGbF1x+at/eEKxRA7ahB9HaUMzQmWG4ge6S4BT9F5lZMtD
+         /IbXSKKEhY9/wvL5hqlFJNqI7qxdRVxFwru0RLE4mDDwI/v76x548pYTq4aQl3bnARKY
+         hG6w==
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@googlegroups.com header.s=20161025 header.b="aKcD/E0k";
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b="M9Msv/WL";
+       arc=pass (i=2 spf=pass spfdomain=gmail.com dkim=pass dkdomain=gmail.com dmarc=pass fromdomain=gmail.com);
+       spf=pass (google.com: domain of upper-valley-dsa-bulletins+bncbcs7bxnb7adrbao2r73qkgqef5fqc5i@googlegroups.com designates 209.85.220.55 as permitted sender) smtp.mailfrom=upper-valley-dsa-bulletins+bncBCS7BXNB7ADRBAO2R73QKGQEF5FQC5I@googlegroups.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <upper-valley-dsa-bulletins+bncBCS7BXNB7ADRBAO2R73QKGQEF5FQC5I@googlegroups.com>
+Received: from mail-sor-f55.google.com (mail-sor-f55.google.com. [209.85.220.55])
+        by mx.google.com with SMTPS id g3sor4332773wru.20.2020.06.12.14.00.50
+        (Google Transport Security);
+        Fri, 12 Jun 2020 14:00:50 -0700 (PDT)
+Received-SPF: pass (google.com: domain of upper-valley-dsa-bulletins+bncbcs7bxnb7adrbao2r73qkgqef5fqc5i@googlegroups.com designates 209.85.220.55 as permitted sender) client-ip=209.85.220.55;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com header.s=20161025 header.b="aKcD/E0k";
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b="M9Msv/WL";
+       arc=pass (i=2 spf=pass spfdomain=gmail.com dkim=pass dkdomain=gmail.com dmarc=pass fromdomain=gmail.com);
+       spf=pass (google.com: domain of upper-valley-dsa-bulletins+bncbcs7bxnb7adrbao2r73qkgqef5fqc5i@googlegroups.com designates 209.85.220.55 as permitted sender) smtp.mailfrom=upper-valley-dsa-bulletins+bncBCS7BXNB7ADRBAO2R73QKGQEF5FQC5I@googlegroups.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+ARC-Seal: i=2; a=rsa-sha256; t=1591995650; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=VsIhNjB0CaqPtyQDRFIGeFCYWnIUtkDs/8QM2V9mhku8ejydnpo5q9mKWzpjpTDs+F
+         qqJuF+2Eilwd5rAk0n6lG7bPxtCoUeypDql8lTC+qOYSnVZnWjkCzCLtIKdx/9YwQufM
+         T3nw1oN3CCBSmTmk3nzQBXsvsBuwqbUCykCiB1+BbtSYSifxdfKbyGTXXoMIbafdo/HT
+         ka9/E/KvWn1fvPF5QIww15d7rat/RBX1Ow/0MexQHQsozOOcQ2B2EJyMayAvLU4HqKUF
+         Iww2kJqWApe5Beuih02qoKyqorzRuV8yK6TBLySulBWUi51LVhuWfqVGF4w50gfZP1LH
+         E9sw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:to:subject:message-id:date:from
+         :mime-version:sender:dkim-signature:dkim-signature;
+        bh=1hS+Z90BdGlVk7Kyug+089FL/ULyHXDNU/DUBaraLL0=;
+        b=VF6uqZq7vW/A3kzHC9Ktk9zUPSevtlIGad4mBv5HZG2uMAvUZ5SI7T6C527Md5Jhg2
+         aqrngMPe+KXfCf3fpfHI4q3b/zJG/zKeUqDJzxFMRsMuqUNecgtg4VFwp6e/iL+9zDkv
+         7D21ImoDEI2LSpjZTtJl7+bDlXE7QjGcb2l8oVWYWbIFoI3S10QljivGzdzLqDltKu/R
+         G4zdLCpeqVn4QUylkejDwHaXWDyKtvGPCHwq80SBrjlimJwdzWM8x3HkFpa0bVp6rqbX
+         oQkGJJkM0aA78IXhuRDKzdWyEsY62lrJX5ZodtGyCvyoOtOynZtPftr7+S/dHtI2sEu/
+         wk1g==
+ARC-Authentication-Results: i=2; gmr-mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=VAPDwg5r;
+       spf=pass (google.com: domain of uppervalleydsa@gmail.com designates 2a00:1450:4864:20::132 as permitted sender) smtp.mailfrom=uppervalleydsa@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20161025;
+        h=sender:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:list-post:list-help:list-archive
+         :list-unsubscribe;
+        bh=1hS+Z90BdGlVk7Kyug+089FL/ULyHXDNU/DUBaraLL0=;
+        b=aKcD/E0kWZ4eInkfWd+Ie0FuUgQyfoJzW4dFc4hMoEiqJ5t40t+44sUF+tbA8rJdef
+         wILnAg5hyPiR7sU64KFQIPG07qeIEE6ZjoB74/gcLBf5Jm3Zq5J/fDZ0c2t1KPJ+znot
+         Pi4c14VUbdo0zrBqFSQDlgc/fguyavO1lPBUXQMS/Ndvsa6wKOk56z6diX5BNvTXvpU6
+         cO48e5GlfHKI4a1Q6zKYMcDVkugEJEu5yJUMVrSDF+hy7D3nMe/2Z5Mxu22uoGVqF7yH
+         cusqIzbt4nm/zgpymyoll4XeJawxo7LPdj688VlD23rOUQe1UdM6Q0dDVgNWIDndHLGd
+         P2Xg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:list-unsubscribe;
+        bh=1hS+Z90BdGlVk7Kyug+089FL/ULyHXDNU/DUBaraLL0=;
+        b=M9Msv/WLkvGAmPWIQr8emar2aSUvFv/CTHJmRw2ZTpWiFZQLTk0KV5yguqtY5v+OM2
+         yBA0KVUC0cSFJDnT9vdnBLFRx1TFjdzZJF1TY12XUm2owq+wWw4mj/ai/SS/x99E34tm
+         ez4FDf2Lm4QsEp2XlGzidxO1W1vGvUcKjBopUTY+QaHK9HNlJuSBvhfHvi6qHyxwjBRp
+         aEtwsbQeJVTUbXRRA76px3euTxJ+YrP6qEZeY1383B2pmeQmd07TQfrN3QiYrUQolerD
+         9Z3YNWuujhiE0zpoY9ApxkpgqwO4IuX97jM9efoP2iTJf6nLshaNCSkGTMwmjMGvvZ5B
+         bMVQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=sender:x-gm-message-state:mime-version:from:date:message-id:subject
+         :to:x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:list-unsubscribe;
+        bh=1hS+Z90BdGlVk7Kyug+089FL/ULyHXDNU/DUBaraLL0=;
+        b=Xaz4RvItBhTfYiUHKJH4WS/GT+3S6YfhATnq0ctK3LZtZSJR+wD8wQM7tHB1PKS/5s
+         HPwnrjH5qzisa02qB8lztOC6n6ZYaocUS/6yeU6K3CIc7T0bG+DZK+o0VBZ2FVUtluxX
+         /wPI1nccZALjsh0ABXnB+6QtnHy+Joriv2TOv8Pgb9GVSPR22NK2ks67C/IokFHn9sAN
+         ZLwwS95grTObrqH1wx0eOS13xxRvnS1KsvOLdkoXpmPszs34lTw22RCVAsnFk5mNlwbg
+         BAXBlvUU1V8edNUsFNYZQz1l6T0kLQ/Gk1E6l1zqRtUh3MsN6+JeOnvk95JCncDCGlts
+         mMPg==
+Sender: upper-valley-dsa-bulletins@googlegroups.com
+X-Gm-Message-State: AOAM532Hw6oMlB36G42s0E+XtrK+4xYxedmBT809rQ7+B+f2Y6dkeIas SZYF1oTB9olEJ9MD9QcDk4s=
+X-Google-Smtp-Source: ABdhPJzLKUVz30YQwMf1+I4vXdVgfBUj04E2P1q1ZvpQZfETFmKpHW7OqJQjJrWZWghPalLNrPJfew==
+X-Received: by 2002:a5d:6144:: with SMTP id y4mr17374981wrt.185.1591995649909;
+        Fri, 12 Jun 2020 14:00:49 -0700 (PDT)
+X-BeenThere: upper-valley-dsa-bulletins@googlegroups.com
+Received: by 2002:adf:e510:: with SMTP id j16ls992234wrm.2.gmail; Fri, 12 Jun 2020 14:00:49 -0700 (PDT)
+X-Received: by 2002:adf:aa42:: with SMTP id q2mr17818306wrd.360.1591995649403;
+        Fri, 12 Jun 2020 14:00:49 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1591995649; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zcQGwvtQzlcszOZfDWpVfKabY4AiZo9lI1ZBESkEuIWTQGwQiii946p7X26b6DgS5F
+         7mtAFoo8r2Tb9FA635jCZuaPJ1HYuTPRC3LaKQZXqomWOOQi7qFjONgQR8ZA+5I6qmS5
+         XiUO8SbQI9AMLRQyBYTTVy6wigxfc1x7AwPvMoszA3uq/dINSIUho529dymZbLXYvLsW
+         eHikpLIW7scluHDjPazNbR79Nqi+T92p1Hh9W0+9S0UE1TpDQYJDa7LGvpXkfzkvTZAP
+         xpkPB6hS205K0ZauPWzq6IR/cfUpvEvoNV/k/sEezeiE70jZ/TbEWX/mHcuPYD7GL8CI
+         TeWg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=uEmvKxFM5l2s0s3UU6tlhfGErUWmdTO7razpLtN1ldQ=;
+        b=UOASUNd7SVF7jHD1X/C9tWmvGHeialEXVmonZIo3HZiMEf48EArsA14jjA2Bi0g/GT
+         sh6ArQJ3rHG3D57RmVtXK2GSEgDDq3lTuObyrhRaTgHj66Gxdi6UqeH2yfjtOV3GJLtZ
+         9eZOXBZ9gXmm5vSPs9oYPMLlrgcpzC5lX++RZ4YPhDAo4DAAnPCQX82gBrJI6z6it7hn
+         jTQp6jw75wJ5PmfxMNm01Lhqkk2sAbPk+qjiU1WyieshLidiVijk7g7mAcAN7+5OMSNl
+         YkkPYKke+gQjW/5KF89zzODpaEq0MofLE2PVC0nrrRb0OxcYr8anOm94r8dLTpl5aB0c
+         feIg==
+ARC-Authentication-Results: i=1; gmr-mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=VAPDwg5r;
+       spf=pass (google.com: domain of uppervalleydsa@gmail.com designates 2a00:1450:4864:20::132 as permitted sender) smtp.mailfrom=uppervalleydsa@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Received: from mail-lf1-x132.google.com (mail-lf1-x132.google.com. [2a00:1450:4864:20::132])
+        by gmr-mx.google.com with ESMTPS id o14si387993wrx.2.2020.06.12.14.00.49
+        for <upper-valley-dsa-bulletins@googlegroups.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 12 Jun 2020 14:00:49 -0700 (PDT)
+Received-SPF: pass (google.com: domain of uppervalleydsa@gmail.com designates 2a00:1450:4864:20::132 as permitted sender) client-ip=2a00:1450:4864:20::132;
+Received: by mail-lf1-x132.google.com with SMTP id d7so6203019lfi.12
+        for <upper-valley-dsa-bulletins@googlegroups.com>; Fri, 12 Jun 2020 14:00:49 -0700 (PDT)
+X-Received: by 2002:ac2:499a:: with SMTP id f26mr7763443lfl.76.1591995648317; Fri, 12 Jun 2020 14:00:48 -0700 (PDT)
+MIME-Version: 1.0
+From: UpperValley DSA <uppervalleydsa@gmail.com>
+Date: Fri, 12 Jun 2020 17:00:36 -0400
+Message-ID: <CAG8Zg4H+NhjrvM31-V4s-c9zbmj+wS570qA_jEy_Cf1aW+9z6Q@mail.gmail.com>
+Subject: Next DSA Meet-Up and More in the Coming Week for Social Justice
+To: upper-valley-dsa-bulletins@googlegroups.com
+Content-Type: multipart/alternative; boundary="0000000000001a1dbc05a7e95fbb"
+X-Original-Sender: uppervalleydsa@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=VAPDwg5r;
+       spf=pass (google.com: domain of uppervalleydsa@gmail.com designates 2a00:1450:4864:20::132 as permitted sender) smtp.mailfrom=uppervalleydsa@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Precedence: list
+Mailing-list: list upper-valley-dsa-bulletins@googlegroups.com; contact upper-valley-dsa-bulletins+owners@googlegroups.com
+List-ID: <upper-valley-dsa-bulletins.googlegroups.com>
+X-Spam-Checked-In-Group: upper-valley-dsa-bulletins@googlegroups.com
+X-Google-Group-Id: 138550105607
+List-Post: <https://groups.google.com/group/upper-valley-dsa-bulletins/post>, <mailto:upper-valley-dsa-bulletins@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:upper-valley-dsa-bulletins+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/upper-valley-dsa-bulletins
+List-Unsubscribe: <mailto:googlegroups-manage+138550105607+unsubscribe@googlegroups.com>, <https://groups.google.com/group/upper-valley-dsa-bulletins/subscribe>
+
+--0000000000001a1dbc05a7e95fbb
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Upper Valley DSA=E2=80=99s next meet-up is Thursday, June 18, 7-8:30 pm: Al=
+l Upper
+Valley DSA members are encouraged to cast their votes in our first election
+for chapter officers. And all interested in the politics of democratic
+socialism are welcome, too, as we reflect on what the national uprisings
+for racial justice and calls for police abolition mean for what we do in
+the Upper Valley. Join us via Zoom at  https://dsausa.zoom.us/j/460238287,
+password UVDSA.
+
+Get equipped for the struggle for police and prison abolition by joining
+our next book-club meetings:
+
+=C2=B7       Thursday, June 25, 7-8:30 pm: *George Jackson=E2=80=99s (1972)=
+ Blood in My
+Eye**. *Jackson was a leading activist and theorist for the Black Power
+Movement before his death in an alleged prison break from San Quentin. *Blo=
+od
+in My Eye *follows Jackson=E2=80=99s first book, *Soledad Brother, *buildin=
+g on its
+analysis and condemnation of racism in modern Amerika. You can download a
+pdf of this short book here
+<https://redyouthnwa.files.wordpress.com/2018/05/george_l-_jackson_blood_in=
+_my_eyebook4you-org.pdf>.
+[Note that Jackson=E2=80=99s sometimes male chauvinist and heteronormative
+formulations shine a light on the challenges of the era that were taken up
+and addressed in the powerful contributions of Black socialist feminists,
+including Jackson=E2=80=99s friend and comrade Angela Davis.]
+
+=C2=B7       Thursday, July 9 (date tentative), 7-8:30 pm: *The End of Poli=
+cing
+by Alex Vitale.* A free e-edition of this book is currently available from
+Verso, so get your copy here
+<https://www.versobooks.com/books/2426-the-end-of-policing> and stay tuned
+for details of our July book-club discussion.
+
+=C2=B7       Both meetings will be via Zoom: https://dsausa.zoom.us/j/46023=
+8287,
+password UVDSA
+
+=C2=B7       Also recommended: The Intercept=E2=80=99s two-part interview
+<https://theintercept.com/2020/06/10/ruth-wilson-gilmore-makes-the-case-for=
+-abolition/?fbclid=3DIwAR2p7Xyozapz1j_z8I8YE3BuKFqOv_8Mi0p54Qy6WVoI9h-SsBxd=
+bMy9AMo>
+with Ruth Wilson Gilmore on =E2=80=9CThe Case for Abolition.=E2=80=9D
+
+Demonstrations for racial justice and against police murder continue:
+
+=C2=B7       We Demand Change Rally, Tomorrow (Saturday), 12-3 pm (car cara=
+van
+2:30-3 pm), Randolph. Co-sponsored by Upper Valley DSA. All the details her=
+e
+<https://www.facebook.com/events/687917338441686/>.
+
+=C2=B7       March and Rally for Black Lives, Tomorrow, 2-8 pm, Bethel: Det=
+ails
+and ways to participate here.
+<https://www.facebook.com/events/616815612517388/>
+
+=C2=B7       Black Lives Matter Vigil, every Tuesday, 5-5:30, Lebanon. Deta=
+ils
+here
+<https://theintercept.com/2020/06/10/ruth-wilson-gilmore-makes-the-case-for=
+-abolition/?fbclid=3DIwAR2p7Xyozapz1j_z8I8YE3BuKFqOv_8Mi0p54Qy6WVoI9h-SsBxd=
+bMy9AMo>
+.
+
+Less than 24 hours after concerned residents raised the alarm about
+barriers to voting in Hanover=E2=80=99s June 23 elections , town officials =
+provided
+additional means for voters to obtain absentee ballots, including by
+calling the Town Hall at 603-640-3202, by emailing townclerk@hanover.org,
+or by picking up and completing a ballot request in the Town Hall vestibule
+weekdays between 8:30 am and 4 pm. *That=E2=80=99s a real victory for democ=
+racy,* *but
+there is still more to be done to ensure that all eligible voters can
+participate in Hanover=E2=80=99s elections and town meeting. *If you are a =
+Hanover
+resident, write to the town manager and selectboard members and tell them t=
+o
+
+=C2=B7       advertise beyond their website all of the options for obtainin=
+g an
+absentee ballot.
+
+=C2=B7       determine and publicize, as promised in a May 18 announcement =
+on
+the town=E2=80=99s website, a location and process for socially distanced i=
+n-person
+voting on June 23.
+
+=C2=B7       determine and publicize, also as promised in the May 18
+announcement, when, where, and how the annual town budget vote will take
+place=E2=80=94particularly critical this year as the proposed budget includ=
+es a *4%
+increase to the police budget. *
+
+Write to Hanover Town Manager Julie Griffin:
+
+=C2=B7       Julia.griffin@hanovernh.org
+
+Also write to Hanover Selectboard members:
+
+=C2=B7       Athos Rassias: Athosras@msn.com
+
+=C2=B7       Peter L. Christie: https://www.hanovernh.org/user/77/contact
+<https://l.facebook.com/l.php?u=3Dhttps%3A%2F%2Fwww.hanovernh.org%2Fuser%2F=
+77%2Fcontact%3Ffbclid%3DIwAR3B9OgdC9q4uWfjgyOeKO9fUZkzZx_f4H8HQ166aBPnMcQ5a=
+fCeizMmp4I&h=3DAT27j9_ufgqKqk6gx0PFmdF0EOEt7jQg0r-ynnzVnQhZmUlEsmI24tyK9vo5=
+4CeYmpkT-X3Pr5ekRkTCBhfkC1eGwylDRU9dM__z69LCrEKMVAzNKzY96WpEl69xGbsLoOz-Iyl=
+d7Oogn67r9I5LJHbNDl-j1ul4-w4ZIIxUQJFK-IbfM8IvdNbBQxVVxT7wCBheNFYBuie8LHURP4=
+GKWfnN88m_POk0y6dgZtr5dZJglE2O6l0cpg458FCsrAEtQnkIEgyOiugVM7wQWSSO2QiQU1ccB=
+CVmmfZwPls6bW0VPZNwCHuqCQxj1nNpudPLN849EhkkbEsGLRLqoTUQSZ28k2JrN3r0klPL7GJB=
+GMSCuO1hRSyByeBxHmWhFkCGAUKBUatCgAi8vYdUfYC5VpU46QPnsXaCt6n13U82zvzvGnc4Q4x=
+LgCm7Gw7OGB2PWP2bTiIJXPvRN8wOPwbSUAsaeiMClLBqQmmsM-2Il9JadFxP4H_MMDrJwRtP4-=
+fDJKNPpA6atm78uoYl-61lOExbf4pzbYGuhrMc6vjnvNWFqirLX3XRh1ymS5Kkif_NfPXimpYRg=
+P4Kzr5zkpoMoJY35rVNsBQMmz4HjSXT7zF9e9us2vAwJ-pwbjOOASazT3PcHiIgXNx->
+
+=C2=B7       William Geraghty: https://www.hanovernh.org/user/68/contact
+<https://l.facebook.com/l.php?u=3Dhttps%3A%2F%2Fwww.hanovernh.org%2Fuser%2F=
+68%2Fcontact%3Ffbclid%3DIwAR3H2jT5V_B_qn-IG6-52IrB3Bpc3lwjgPn2uFV5Z9z1LS0gX=
+y1X3mS9Gn8&h=3DAT3NxmR1UOGRdNgdvgwhJfv7SoAqVujxsJYKhC2dfXiAhVLyw19d93SYtIW-=
+M8FP2KQ7isj-STWcWY-qeFwzCkWWyBZnw1uVLW42NkHkZm3cUFLLmoZUaIl3qX3ApHqbhNith3j=
+meM2uNQg2_ZkfzKP8Rzgi4A8SN6mzCmtWlREtJgvW6z8nZ5aUvx79bfUh6OamSQANwbaFunxxEs=
+YWmSniCLpsaz3-xKr3hqgdJ_9RYa8VB6nmCHBPI4_i6lcUc0G-zgd9yKcpSeZoGLo-9bHr6k073=
+eO6W-Psrk9qARDO1pbcv-iaJq_ebBetTbzZs9gq9_HEXkRNrcdI_0ztDN0yIoIBNugOCrlDMb2R=
+CAitaf82dwgydiSFqZHysQFJSSA2JOXHd-l-ysLxs6nv9sBCDdOoNnwPuHp30BWp8B0jJvag2TK=
+EbC2vzJHXtbYHkpBa-rzJXalIXN4MGZIi21UDVdW5FN9teixxwWkF0l8Y75RBJEFfPvsVowuZcE=
+laYS_mw1pTTwtC6IpQJVu7uB5kCMaKmsNV9mO-BIepbq_tNRg4GYSUnamPQf5w-n2o7Qz8WJF2t=
+73rWjPO3Y7jXG2Icib3f13QxWywwsUVKmDNgIJGw4SXUnyOdsMgo4TN_y_FCsG79WYr>
+
+=C2=B7       Nancy Carter: https://www.hanovernh.org/user/107/contact
+<https://l.facebook.com/l.php?u=3Dhttps%3A%2F%2Fwww.hanovernh.org%2Fuser%2F=
+107%2Fcontact%3Ffbclid%3DIwAR2dQ-VuqQhX-6c4AAw7qi9ifuXi8ruHxf7Muv_LPp4W7Gqo=
+rmGEsOcgN-k&h=3DAT1Dm23LTtJMwlYKvn3FHAEmOk0ivh7-kG9CtNakxs2-pAU4S5x9HUoBpnn=
+A-LGV49euzwIkvjZipt5nHj3qrrsPxlRq6fEQUrgauplB_G_EZIns_ukgdYlLWWG9Nq97pjrB9W=
+abHBlSqM5n_8R6dlPyP3Yp4dCmMvql9Fm6dgP7xCi0t96fimOfdISQM6o8cB8wrHdLVBsIVhLIy=
+ug6mv5i0hBTF8KrLAeeXjDs3UdNmPtZDuIHt4HeWMOvWWdeKYgzOr8xlhjKOcDZyhvoY-06Wy0g=
+X02oX-LdPB13fnoac6YJF5TmlDi3lQu9VOQo8qfmDJq83XHD7PDLTDW6yzMkw_6-oIff5hg0qIe=
+B6AEfY5HT4VtnVQ4OUC7dT6rSgdKcc0tB-b2-V9cQv6QekqbQM8jqVMX18HmbxGEzKHsTa1OiUE=
+TM_TV91R1ZZAKCNX0stWHqlGJ9MNYM-NoPIXVwsg6E4tTXkEe9QgAkqUdlI34zsg5nyqD3TWC1r=
+UYn7PzvTxwMTMgUsGqW855u0YNo9dsMeDmj-29TXoqmKPz9KHz7TkIE2-2cIpNy6VbHiHBzQavV=
+CUyxbsf_j96xWbVZX2-SekM7cX8iaFzb6Ij1dA1Mk0kco51anFmIscoqEF_3zNWjPaMH>
+
+=C2=B7       Joanna Whitcomb: https://www.hanovernh.org/user/76/contact
+<https://www.hanovernh.org/user/76/contact?fbclid=3DIwAR1wvfLLLHUxo_69qbgVW=
+vBEvSXgEdgWpBVPTnSTS5sMci5rm1AM3RC8-m4>
+
+Defend grassroots democracy from the corporate Democrats:  =E2=80=9CThey Ca=
+lled Us
+SuperPACs=E2=80=9D (June 17, 7-9 pm) is an online panel about the social ju=
+stice
+and labor organizations who were smeared by the mainstream press and
+corporate Democrats as =E2=80=9CSuperPACs=E2=80=9D in their organizing for =
+Sanders=E2=80=99
+presidential campaign=E2=80=94and the continuing fight for genuine democrac=
+y.
+Co-hosted by Southern New Hampshire DSA and Upper Valley DSA, you=E2=80=99l=
+l find
+the link to the panel here
+<https://www.facebook.com/events/180163083347000/>.
+
+
+
+Stay in touch with Upper Valley DSA by liking and following us on Facebook:
+@uppervalleydsa. Write to us=E2=80=94including about getting more involved!=
+=E2=80=94anytime
+at uppervalleydsa@gmail.com. And if you want to opt out of future periodic
+bulletins, you can do so via the link in this email or by visiting your
+Google Groups.
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Upper Valley DSA Bulletins" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to upper-valley-dsa-bulletins+unsubscribe@googlegroups.com.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+upper-valley-dsa-bulletins/CAG8Zg4H%2BNhjrvM31-V4s-c9zbmj%2BwS570qA_jEy_Cf1=
+aW%2B9z6Q%40mail.gmail.com.
+
+--0000000000001a1dbc05a7e95fbb
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p class=3D"MsoNormal" style=3D"margin:0in 0in 6pt;font-si=
+ze:12pt;font-family:Calibri,sans-serif"><span style=3D"font-size:10pt;font-=
+family:&quot;Avenir Book&quot;;color:red">Upper Valley
+DSA=E2=80=99s next meet-up is Thursday, June 18, 7-8:30 pm: </span><span st=
+yle=3D"font-size:10pt;font-family:&quot;Avenir Book&quot;;color:black">All =
+Upper Valley DSA members are encouraged
+to cast their votes in our first election for chapter officers. And all
+interested in the politics of democratic socialism are welcome, too, as we
+reflect on what the national uprisings for racial justice and calls for pol=
+ice
+abolition mean for what we do in the Upper Valley. Join us via Zoom at </sp=
+an><span style=3D"font-size:10pt;font-family:&quot;Avenir Book&quot;;color:=
+rgb(35,35,51);background-image:initial;background-position:initial;backgrou=
+nd-size:initial;background-repeat:initial;background-origin:initial;backgro=
+und-clip:initial">=C2=A0</span><span style=3D"font-size:10pt;font-family:&q=
+uot;Avenir Book&quot;"><a href=3D"https://dsausa.zoom.us/j/460238287" targe=
+t=3D"_blank" style=3D"color:blue"><span style=3D"color:rgb(14,113,235)">htt=
+ps://dsausa.zoom.us/j/460238287</span></a></span><span style=3D"font-size:1=
+0pt;font-family:&quot;Avenir Book&quot;">, password UVDSA.</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 6pt;font-size:12pt;font-fami=
+ly:Calibri,sans-serif"><span style=3D"font-size:10pt;font-family:&quot;Aven=
+ir Book&quot;;color:red">Get equipped for the struggle for police and
+prison abolition by joining our next book-club meetings:</span></p>
+
+<p class=3D"gmail-MsoListParagraph" style=3D"margin:0in 0in 6pt 0.5in;font-=
+size:12pt;font-family:Calibri,sans-serif"><span style=3D"font-size:10pt;fon=
+t-family:Symbol">=C2=B7<span style=3D"font-variant-numeric:normal;font-vari=
+ant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:normal;=
+font-family:&quot;Times New Roman&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0
+</span></span><span style=3D"font-size:10pt;font-family:&quot;Avenir Book&q=
+uot;;color:rgb(29,33,41)">Thursday, June 25, 7-8:30 pm: <b>George Jackson=
+=E2=80=99s (1972) <i>Blood
+in My Eye</i></b><i>. </i>Jackson was a leading activist and theorist for t=
+he
+Black Power Movement before his death in an alleged prison break from San
+Quentin. <i>Blood in My Eye </i>follows Jackson=E2=80=99s first book, <i>So=
+ledad
+Brother, </i>building on its analysis and condemnation of racism in modern
+Amerika. You can download a pdf of this short book </span><span style=3D"fo=
+nt-size:10pt;font-family:&quot;Avenir Book&quot;"><a href=3D"https://redyou=
+thnwa.files.wordpress.com/2018/05/george_l-_jackson_blood_in_my_eyebook4you=
+-org.pdf" style=3D"color:blue">here</a></span><span style=3D"font-size:10pt=
+;font-family:&quot;Avenir Book&quot;;color:rgb(29,33,41)">. </span><span st=
+yle=3D"font-size:10pt;font-family:&quot;Avenir Book&quot;">[Note that Jacks=
+on=E2=80=99s
+sometimes male chauvinist and heteronormative formulations shine a light on=
+ the
+challenges of the era that were taken up and addressed in the powerful
+contributions of Black socialist feminists, including Jackson=E2=80=99s fri=
+end and
+comrade Angela Davis.]</span></p>
+
+<p class=3D"gmail-MsoListParagraph" style=3D"margin:0in 0in 6pt 0.5in;font-=
+size:12pt;font-family:Calibri,sans-serif"><span style=3D"font-size:10pt;fon=
+t-family:Symbol">=C2=B7<span style=3D"font-variant-numeric:normal;font-vari=
+ant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:normal;=
+font-family:&quot;Times New Roman&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0
+</span></span><span style=3D"font-size:10pt;font-family:&quot;Avenir Book&q=
+uot;;color:rgb(29,33,41)">Thursday, July 9 (date tentative), 7-8:30 pm: <b>=
+<i>The End of
+Policing </i>by Alex Vitale.</b> A free e-edition of this book is currently
+available from Verso, so get your copy </span><span style=3D"font-size:10pt=
+;font-family:&quot;Avenir Book&quot;"><a href=3D"https://www.versobooks.com=
+/books/2426-the-end-of-policing" style=3D"color:blue">here</a></span><span =
+style=3D"font-size:10pt;font-family:&quot;Avenir Book&quot;;color:rgb(29,33=
+,41)"> and stay tuned for
+details of our July book-club discussion.</span><span style=3D"font-size:10=
+pt;font-family:&quot;Avenir Book&quot;"></span></p>
+
+<p class=3D"gmail-MsoListParagraph" style=3D"margin:0in 0in 6pt 0.5in;font-=
+size:12pt;font-family:Calibri,sans-serif"><span style=3D"font-size:10pt;fon=
+t-family:Symbol">=C2=B7<span style=3D"font-variant-numeric:normal;font-vari=
+ant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:normal;=
+font-family:&quot;Times New Roman&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0
+</span></span><span style=3D"font-size:10pt;font-family:&quot;Avenir Book&q=
+uot;;color:rgb(29,33,41)">Both meetings will be via Zoom: </span><span styl=
+e=3D"font-size:10pt;font-family:&quot;Avenir Book&quot;"><a href=3D"https:/=
+/dsausa.zoom.us/j/460238287" target=3D"_blank" style=3D"color:blue"><span s=
+tyle=3D"color:rgb(14,113,235);text-decoration-line:none">https://dsausa.zoo=
+m.us/j/460238287</span></a>, password UVDSA</span></p>
+
+<p class=3D"gmail-MsoListParagraph" style=3D"margin:0in 0in 6pt 0.5in;font-=
+size:12pt;font-family:Calibri,sans-serif"><span style=3D"font-size:10pt;fon=
+t-family:Symbol">=C2=B7<span style=3D"font-variant-numeric:normal;font-vari=
+ant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:normal;=
+font-family:&quot;Times New Roman&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0
+</span></span><span style=3D"font-size:10pt;font-family:&quot;Avenir Book&q=
+uot;;color:rgb(29,33,41)">Also recommended: The Intercept=E2=80=99s </span>=
+<span style=3D"font-size:10pt;font-family:&quot;Avenir Book&quot;"><a href=
+=3D"https://theintercept.com/2020/06/10/ruth-wilson-gilmore-makes-the-case-=
+for-abolition/?fbclid=3DIwAR2p7Xyozapz1j_z8I8YE3BuKFqOv_8Mi0p54Qy6WVoI9h-Ss=
+BxdbMy9AMo" style=3D"color:blue">two-part
+interview</a></span><span style=3D"font-size:10pt;font-family:&quot;Avenir =
+Book&quot;;color:rgb(29,33,41)"> with Ruth Wilson Gilmore on =E2=80=9CThe C=
+ase for Abolition.=E2=80=9D</span><span style=3D"font-size:10pt;font-family=
+:&quot;Avenir Book&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 6pt;font-size:12pt;font-fami=
+ly:Calibri,sans-serif"><span style=3D"font-size:10pt;font-family:&quot;Aven=
+ir Book&quot;;color:red">Demonstrations for racial justice and
+against police murder continue:</span></p>
+
+<p class=3D"gmail-MsoListParagraph" style=3D"margin:0in 0in 6pt 0.5in;text-=
+align:justify;font-size:12pt;font-family:Calibri,sans-serif"><span style=3D=
+"font-size:10pt;font-family:Symbol;color:black">=C2=B7<span style=3D"font-v=
+ariant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;fo=
+nt-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0
+</span></span><span style=3D"font-size:10pt;font-family:&quot;Avenir Book&q=
+uot;;color:black">We Demand Change Rally, Tomorrow (Saturday),
+12-3 pm (car caravan 2:30-3 pm), Randolph. Co-sponsored by Upper Valley DSA=
+. All
+the details </span><span style=3D"font-size:10pt;font-family:&quot;Avenir B=
+ook&quot;"><a href=3D"https://www.facebook.com/events/687917338441686/" sty=
+le=3D"color:blue">here</a><span style=3D"color:black">.</span></span></p>
+
+<p class=3D"gmail-MsoListParagraph" style=3D"margin:0in 0in 6pt 0.5in;text-=
+align:justify;font-size:12pt;font-family:Calibri,sans-serif"><span style=3D=
+"font-size:10pt;font-family:Symbol;color:black">=C2=B7<span style=3D"font-v=
+ariant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;fo=
+nt-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0
+</span></span><span style=3D"font-size:10pt;font-family:&quot;Avenir Book&q=
+uot;;color:black">March and Rally for Black Lives, Tomorrow,
+2-8 pm, Bethel: Details and ways to participate <a href=3D"https://www.face=
+book.com/events/616815612517388/" style=3D"color:blue">here.</a></span></p>
+
+<p class=3D"gmail-MsoListParagraph" style=3D"margin:0in 0in 6pt 0.5in;text-=
+align:justify;font-size:12pt;font-family:Calibri,sans-serif"><span style=3D=
+"font-size:10pt;font-family:Symbol;color:black">=C2=B7<span style=3D"font-v=
+ariant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;fo=
+nt-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0
+</span></span><span style=3D"font-size:10pt;font-family:&quot;Avenir Book&q=
+uot;;color:black">Black Lives Matter Vigil, every Tuesday,
+5-5:30, Lebanon. Details </span><span style=3D"font-size:10pt;font-family:&=
+quot;Avenir Book&quot;"><a href=3D"https://theintercept.com/2020/06/10/ruth=
+-wilson-gilmore-makes-the-case-for-abolition/?fbclid=3DIwAR2p7Xyozapz1j_z8I=
+8YE3BuKFqOv_8Mi0p54Qy6WVoI9h-SsBxdbMy9AMo" style=3D"color:blue">here</a><sp=
+an style=3D"color:black">.</span></span></p>
+
+<p style=3D"margin:0in 0in 6pt;background-image:initial;background-position=
+:initial;background-size:initial;background-repeat:initial;background-origi=
+n:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times Ne=
+w Roman&quot;,serif"><span style=3D"font-size:10pt;font-family:&quot;Avenir=
+ Book&quot;;color:red">Less than 24 hours after concerned
+residents raised the alarm about barriers to voting in Hanover=E2=80=99s Ju=
+ne 23
+elections </span><span style=3D"font-size:10pt;font-family:&quot;Avenir Boo=
+k&quot;;color:rgb(29,33,41)">, town officials provided additional
+means for voters to obtain absentee ballots, including by calling the Town =
+Hall
+at 603-640-3202, by emailing </span><span style=3D"font-size:10pt;font-fami=
+ly:&quot;Avenir Book&quot;;color:black"><a href=3D"mailto:townclerk@hanover=
+.org" style=3D"color:blue">townclerk@hanover.org</a></span><span style=3D"f=
+ont-size:10pt;font-family:&quot;Avenir Book&quot;;color:rgb(29,33,41)">, or=
+ by picking up and completing a ballot request in the Town
+Hall vestibule weekdays between 8:30 am and 4 pm. <i>That=E2=80=99s a real =
+victory for
+democracy,</i> <i>but there is still more to be done to ensure that all
+eligible voters can participate in Hanover=E2=80=99s elections and town mee=
+ting.<u> </u></i>If
+you are a Hanover resident, write to the town manager and selectboard membe=
+rs
+and tell them to<i><u></u></i></span></p>
+
+<p style=3D"margin:0in 0in 6pt 0.5in;background-image:initial;background-po=
+sition:initial;background-size:initial;background-repeat:initial;background=
+-origin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif"><span style=3D"font-size:10pt;font-family:Symbol=
+;color:rgb(29,33,41)">=C2=B7<span style=3D"font-variant-numeric:normal;font=
+-variant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:no=
+rmal;font-family:&quot;Times New Roman&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 </span></span><span style=3D"font-size:10pt;font-family:&quot;Ave=
+nir Book&quot;;color:rgb(29,33,41)">advertise beyond their website all of t=
+he options for obtaining
+an absentee ballot.</span></p>
+
+<p style=3D"margin:0in 0in 6pt 0.5in;background-image:initial;background-po=
+sition:initial;background-size:initial;background-repeat:initial;background=
+-origin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif"><span style=3D"font-size:10pt;font-family:Symbol=
+;color:rgb(29,33,41)">=C2=B7<span style=3D"font-variant-numeric:normal;font=
+-variant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:no=
+rmal;font-family:&quot;Times New Roman&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 </span></span><span style=3D"font-size:10pt;font-family:&quot;Ave=
+nir Book&quot;;color:rgb(29,33,41)">determine and publicize, as promised in=
+ a May 18 announcement on
+the town=E2=80=99s website, a location and process for socially distanced i=
+n-person
+voting on June 23.</span></p>
+
+<p style=3D"margin:0in 0in 6pt 0.5in;background-image:initial;background-po=
+sition:initial;background-size:initial;background-repeat:initial;background=
+-origin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif"><span style=3D"font-size:10pt;font-family:Symbol=
+;color:rgb(29,33,41)">=C2=B7<span style=3D"font-variant-numeric:normal;font=
+-variant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:no=
+rmal;font-family:&quot;Times New Roman&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0
+</span></span><span style=3D"font-size:10pt;font-family:&quot;Avenir Book&q=
+uot;;color:rgb(29,33,41)">determine and publicize, also as
+promised in the May 18 announcement, when, where, and how the annual town
+budget vote will take place=E2=80=94particularly critical this year as the =
+proposed
+budget includes a <i><u>4% increase to the police budget</u>.<u> </u></i></=
+span></p>
+
+<p style=3D"margin:0in 0in 6pt;background-image:initial;background-position=
+:initial;background-size:initial;background-repeat:initial;background-origi=
+n:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times Ne=
+w Roman&quot;,serif"><span style=3D"font-size:10pt;font-family:&quot;Avenir=
+ Book&quot;;color:rgb(29,33,41)">Write to Hanover Town Manager Julie
+Griffin:</span></p>
+
+<p style=3D"margin:0in 0in 6pt 0.5in;background-image:initial;background-po=
+sition:initial;background-size:initial;background-repeat:initial;background=
+-origin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif"><span style=3D"font-size:10pt;font-family:Symbol=
+;color:rgb(29,33,41)">=C2=B7<span style=3D"font-variant-numeric:normal;font=
+-variant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:no=
+rmal;font-family:&quot;Times New Roman&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 </span></span><span style=3D"font-size:10pt;font-family:&quot;Ave=
+nir Book&quot;;color:rgb(29,33,41)"><a href=3D"mailto:Julia.griffin@hanover=
+nh.org">Julia.griffin@hanovernh.org</a></span></p>
+
+<p style=3D"margin:0in 0in 6pt;background-image:initial;background-position=
+:initial;background-size:initial;background-repeat:initial;background-origi=
+n:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times Ne=
+w Roman&quot;,serif"><span style=3D"font-size:10pt;font-family:&quot;Avenir=
+ Book&quot;;color:rgb(29,33,41)">Also write to Hanover Selectboard
+members:</span></p>
+
+<p style=3D"margin:0in 0in 6pt 0.5in;background-image:initial;background-po=
+sition:initial;background-size:initial;background-repeat:initial;background=
+-origin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif"><span style=3D"font-size:10pt;font-family:Symbol=
+;color:rgb(29,33,41)">=C2=B7<span style=3D"font-variant-numeric:normal;font=
+-variant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:no=
+rmal;font-family:&quot;Times New Roman&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 </span></span><span style=3D"font-size:10pt;font-family:&quot;Ave=
+nir Book&quot;;color:rgb(29,33,41)">Athos Rassias: </span><span style=3D"fo=
+nt-size:10pt;font-family:&quot;Avenir Book&quot;;color:black"><a href=3D"ma=
+ilto:Athosras@msn.com" style=3D"color:blue">Athosras@msn.com</a></span><spa=
+n style=3D"font-size:10pt;font-family:&quot;Avenir Book&quot;;color:rgb(29,=
+33,41)"></span></p>
+
+<p style=3D"margin:0in 0in 6pt 0.5in;background-image:initial;background-po=
+sition:initial;background-size:initial;background-repeat:initial;background=
+-origin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif"><span style=3D"font-size:10pt;font-family:Symbol=
+;color:rgb(29,33,41)">=C2=B7<span style=3D"font-variant-numeric:normal;font=
+-variant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:no=
+rmal;font-family:&quot;Times New Roman&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 </span></span><span style=3D"font-size:10pt;font-family:&quot;Ave=
+nir Book&quot;;color:rgb(29,33,41)">Peter L. Christie:=C2=A0</span><span st=
+yle=3D"font-size:10pt;font-family:&quot;Avenir Book&quot;;color:black"><a h=
+ref=3D"https://l.facebook.com/l.php?u=3Dhttps%3A%2F%2Fwww.hanovernh.org%2Fu=
+ser%2F77%2Fcontact%3Ffbclid%3DIwAR3B9OgdC9q4uWfjgyOeKO9fUZkzZx_f4H8HQ166aBP=
+nMcQ5afCeizMmp4I&amp;h=3DAT27j9_ufgqKqk6gx0PFmdF0EOEt7jQg0r-ynnzVnQhZmUlEsm=
+I24tyK9vo54CeYmpkT-X3Pr5ekRkTCBhfkC1eGwylDRU9dM__z69LCrEKMVAzNKzY96WpEl69xG=
+bsLoOz-Iyld7Oogn67r9I5LJHbNDl-j1ul4-w4ZIIxUQJFK-IbfM8IvdNbBQxVVxT7wCBheNFYB=
+uie8LHURP4GKWfnN88m_POk0y6dgZtr5dZJglE2O6l0cpg458FCsrAEtQnkIEgyOiugVM7wQWSS=
+O2QiQU1ccBCVmmfZwPls6bW0VPZNwCHuqCQxj1nNpudPLN849EhkkbEsGLRLqoTUQSZ28k2JrN3=
+r0klPL7GJBGMSCuO1hRSyByeBxHmWhFkCGAUKBUatCgAi8vYdUfYC5VpU46QPnsXaCt6n13U82z=
+vzvGnc4Q4xLgCm7Gw7OGB2PWP2bTiIJXPvRN8wOPwbSUAsaeiMClLBqQmmsM-2Il9JadFxP4H_M=
+MDrJwRtP4-fDJKNPpA6atm78uoYl-61lOExbf4pzbYGuhrMc6vjnvNWFqirLX3XRh1ymS5Kkif_=
+NfPXimpYRgP4Kzr5zkpoMoJY35rVNsBQMmz4HjSXT7zF9e9us2vAwJ-pwbjOOASazT3PcHiIgXN=
+x-" target=3D"_blank" style=3D"color:blue"><span style=3D"color:rgb(56,88,1=
+52)">https://www.hanovernh.org/user/77/contact</span></a></span><span style=
+=3D"font-size:10pt;font-family:&quot;Avenir Book&quot;;color:rgb(29,33,41)"=
+></span></p>
+
+<p style=3D"margin:0in 0in 6pt 0.5in;background-image:initial;background-po=
+sition:initial;background-size:initial;background-repeat:initial;background=
+-origin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif"><span style=3D"font-size:10pt;font-family:Symbol=
+;color:rgb(29,33,41)">=C2=B7<span style=3D"font-variant-numeric:normal;font=
+-variant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:no=
+rmal;font-family:&quot;Times New Roman&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 </span></span><span style=3D"font-size:10pt;font-family:&quot;Ave=
+nir Book&quot;;color:rgb(29,33,41)">William Geraghty:=C2=A0</span><span sty=
+le=3D"font-size:10pt;font-family:&quot;Avenir Book&quot;;color:black"><a hr=
+ef=3D"https://l.facebook.com/l.php?u=3Dhttps%3A%2F%2Fwww.hanovernh.org%2Fus=
+er%2F68%2Fcontact%3Ffbclid%3DIwAR3H2jT5V_B_qn-IG6-52IrB3Bpc3lwjgPn2uFV5Z9z1=
+LS0gXy1X3mS9Gn8&amp;h=3DAT3NxmR1UOGRdNgdvgwhJfv7SoAqVujxsJYKhC2dfXiAhVLyw19=
+d93SYtIW-M8FP2KQ7isj-STWcWY-qeFwzCkWWyBZnw1uVLW42NkHkZm3cUFLLmoZUaIl3qX3ApH=
+qbhNith3jmeM2uNQg2_ZkfzKP8Rzgi4A8SN6mzCmtWlREtJgvW6z8nZ5aUvx79bfUh6OamSQANw=
+baFunxxEsYWmSniCLpsaz3-xKr3hqgdJ_9RYa8VB6nmCHBPI4_i6lcUc0G-zgd9yKcpSeZoGLo-=
+9bHr6k073eO6W-Psrk9qARDO1pbcv-iaJq_ebBetTbzZs9gq9_HEXkRNrcdI_0ztDN0yIoIBNug=
+OCrlDMb2RCAitaf82dwgydiSFqZHysQFJSSA2JOXHd-l-ysLxs6nv9sBCDdOoNnwPuHp30BWp8B=
+0jJvag2TKEbC2vzJHXtbYHkpBa-rzJXalIXN4MGZIi21UDVdW5FN9teixxwWkF0l8Y75RBJEFfP=
+vsVowuZcElaYS_mw1pTTwtC6IpQJVu7uB5kCMaKmsNV9mO-BIepbq_tNRg4GYSUnamPQf5w-n2o=
+7Qz8WJF2t73rWjPO3Y7jXG2Icib3f13QxWywwsUVKmDNgIJGw4SXUnyOdsMgo4TN_y_FCsG79WY=
+r" target=3D"_blank" style=3D"color:blue"><span style=3D"color:rgb(56,88,15=
+2)">https://www.hanovernh.org/user/68/contact</span></a></span><span style=
+=3D"font-size:10pt;font-family:&quot;Avenir Book&quot;;color:rgb(29,33,41)"=
+></span></p>
+
+<p style=3D"margin:0in 0in 6pt 0.5in;background-image:initial;background-po=
+sition:initial;background-size:initial;background-repeat:initial;background=
+-origin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif"><span style=3D"font-size:10pt;font-family:Symbol=
+;color:rgb(29,33,41)">=C2=B7<span style=3D"font-variant-numeric:normal;font=
+-variant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:no=
+rmal;font-family:&quot;Times New Roman&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 </span></span><span style=3D"font-size:10pt;font-family:&quot;Ave=
+nir Book&quot;;color:rgb(29,33,41)">Nancy Carter:=C2=A0</span><span style=
+=3D"font-size:10pt;font-family:&quot;Avenir Book&quot;;color:black"><a href=
+=3D"https://l.facebook.com/l.php?u=3Dhttps%3A%2F%2Fwww.hanovernh.org%2Fuser=
+%2F107%2Fcontact%3Ffbclid%3DIwAR2dQ-VuqQhX-6c4AAw7qi9ifuXi8ruHxf7Muv_LPp4W7=
+GqormGEsOcgN-k&amp;h=3DAT1Dm23LTtJMwlYKvn3FHAEmOk0ivh7-kG9CtNakxs2-pAU4S5x9=
+HUoBpnnA-LGV49euzwIkvjZipt5nHj3qrrsPxlRq6fEQUrgauplB_G_EZIns_ukgdYlLWWG9Nq9=
+7pjrB9WabHBlSqM5n_8R6dlPyP3Yp4dCmMvql9Fm6dgP7xCi0t96fimOfdISQM6o8cB8wrHdLVB=
+sIVhLIyug6mv5i0hBTF8KrLAeeXjDs3UdNmPtZDuIHt4HeWMOvWWdeKYgzOr8xlhjKOcDZyhvoY=
+-06Wy0gX02oX-LdPB13fnoac6YJF5TmlDi3lQu9VOQo8qfmDJq83XHD7PDLTDW6yzMkw_6-oIff=
+5hg0qIeB6AEfY5HT4VtnVQ4OUC7dT6rSgdKcc0tB-b2-V9cQv6QekqbQM8jqVMX18HmbxGEzKHs=
+Ta1OiUETM_TV91R1ZZAKCNX0stWHqlGJ9MNYM-NoPIXVwsg6E4tTXkEe9QgAkqUdlI34zsg5nyq=
+D3TWC1rUYn7PzvTxwMTMgUsGqW855u0YNo9dsMeDmj-29TXoqmKPz9KHz7TkIE2-2cIpNy6VbHi=
+HBzQavVCUyxbsf_j96xWbVZX2-SekM7cX8iaFzb6Ij1dA1Mk0kco51anFmIscoqEF_3zNWjPaMH=
+" target=3D"_blank" style=3D"color:blue"><span style=3D"color:rgb(56,88,152=
+)">https://www.hanovernh.org/user/107/contact</span></a></span><span style=
+=3D"font-size:10pt;font-family:&quot;Avenir Book&quot;;color:rgb(29,33,41)"=
+></span></p>
+
+<p style=3D"margin:0in 0in 6pt 0.5in;background-image:initial;background-po=
+sition:initial;background-size:initial;background-repeat:initial;background=
+-origin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif"><span style=3D"font-size:10pt;font-family:Symbol=
+;color:rgb(29,33,41)">=C2=B7<span style=3D"font-variant-numeric:normal;font=
+-variant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:no=
+rmal;font-family:&quot;Times New Roman&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 </span></span><span style=3D"font-size:10pt;font-family:&quot;Ave=
+nir Book&quot;;color:rgb(29,33,41)">Joanna Whitcomb:=C2=A0</span><span styl=
+e=3D"font-size:10pt;font-family:&quot;Avenir Book&quot;;color:black"><a hre=
+f=3D"https://www.hanovernh.org/user/76/contact?fbclid=3DIwAR1wvfLLLHUxo_69q=
+bgVWvBEvSXgEdgWpBVPTnSTS5sMci5rm1AM3RC8-m4" target=3D"_blank" style=3D"colo=
+r:blue"><span style=3D"color:rgb(56,88,152)">https://www.hanovernh.org/user=
+/76/contact</span></a></span><span style=3D"font-size:10pt;font-family:&quo=
+t;Avenir Book&quot;;color:rgb(29,33,41)"></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;font-size:12pt;font=
+-family:Calibri,sans-serif"><span style=3D"font-size:10pt;font-family:&quot=
+;Avenir Book&quot;;color:red;background-image:initial;background-position:i=
+nitial;background-size:initial;background-repeat:initial;background-origin:=
+initial;background-clip:initial">Defend grassroots democracy from the corpo=
+rate
+Democrats: =C2=A0</span><span style=3D"font-size:10pt;font-family:&quot;Ave=
+nir Book&quot;;color:rgb(28,30,33);background-image:initial;background-posi=
+tion:initial;background-size:initial;background-repeat:initial;background-o=
+rigin:initial;background-clip:initial">=E2=80=9CThey Called Us
+SuperPACs=E2=80=9D (June 17, 7-9 pm) is an online panel about the social ju=
+stice and
+labor organizations who were smeared by the mainstream press and corporate
+Democrats as =E2=80=9CSuperPACs=E2=80=9D in their organizing for Sanders=E2=
+=80=99 presidential campaign=E2=80=94and
+the continuing fight for genuine democracy. Co-hosted by Southern New Hamps=
+hire
+DSA and Upper Valley DSA, you=E2=80=99ll find the link to the panel <a href=
+=3D"https://www.facebook.com/events/180163083347000/" style=3D"color:blue">=
+here</a>.</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;font-size:12pt;font=
+-family:Calibri,sans-serif"><span style=3D"font-size:10pt;font-family:&quot=
+;Avenir Book&quot;;color:rgb(28,30,33);background-image:initial;background-=
+position:initial;background-size:initial;background-repeat:initial;backgrou=
+nd-origin:initial;background-clip:initial">=C2=A0</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;font-size:12pt;font=
+-family:Calibri,sans-serif"><span style=3D"font-size:10pt;font-family:&quot=
+;Avenir Book&quot;;background-image:initial;background-position:initial;bac=
+kground-size:initial;background-repeat:initial;background-origin:initial;ba=
+ckground-clip:initial">Stay in touch with Upper Valley DSA by liking
+and following us on Facebook: @uppervalleydsa. Write to us=E2=80=94includin=
+g about
+getting more involved!=E2=80=94anytime at=C2=A0</span><span style=3D"font-s=
+ize:10pt;font-family:&quot;Avenir Book&quot;"><a href=3D"mailto:uppervalley=
+dsa@gmail.com" target=3D"_blank" style=3D"color:blue"><span style=3D"backgr=
+ound-image:initial;background-position:initial;background-size:initial;back=
+ground-repeat:initial;background-origin:initial;background-clip:initial">up=
+pervalleydsa@gmail.com</span></a><span style=3D"background-image:initial;ba=
+ckground-position:initial;background-size:initial;background-repeat:initial=
+;background-origin:initial;background-clip:initial">. And if you want to op=
+t out of future periodic bulletins,
+you can do so via the link in this email or by visiting your Google Groups.=
+</span></span></p></div>
+
+<p></p>
+
+-- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Upper Valley DSA Bulletins&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:upper-valley-dsa-bulletins+unsubscribe@googlegrou=
+ps.com">upper-valley-dsa-bulletins+unsubscribe@googlegroups.com</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/upper-valley-dsa-bulletins/CAG8Zg4H%2BNhjrvM31-V4s-c9zbmj%2BwS57=
+0qA_jEy_Cf1aW%2B9z6Q%40mail.gmail.com?utm_medium=3Demail&utm_source=3Dfoote=
+r">https://groups.google.com/d/msgid/upper-valley-dsa-bulletins/CAG8Zg4H%2B=
+NhjrvM31-V4s-c9zbmj%2BwS570qA_jEy_Cf1aW%2B9z6Q%40mail.gmail.com</a>.<br />
+
+--0000000000001a1dbc05a7e95fbb--

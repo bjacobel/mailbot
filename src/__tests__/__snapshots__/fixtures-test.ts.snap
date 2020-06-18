@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fixtures bulletin.txt 1`] = `
+Object {
+  "channel": "",
+  "mrkdwn": true,
+  "text": false,
+  "username": "UpperValley DSA",
+}
+`;

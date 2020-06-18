@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parse function handler composeMessage method matches snapshot for a basic email 1`] = `
+Object {
+  "channel": "",
+  "mrkdwn": true,
+  "text": "",
+  "username": "Brian Jacobel",
+}
+`;
