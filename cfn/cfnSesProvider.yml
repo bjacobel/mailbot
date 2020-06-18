@@ -1,0 +1,59 @@
+Resources:
+  # From https://github.com/binxio/cfn-ses-provider
+  LambdaPolicy:
+    Type: AWS::IAM::Policy
+    DependsOn:
+      - LambdaRole
+    Properties:
+      PolicyName: CFNSESProviderPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - route53:GetHostedZone
+              - route53:ChangeResourceRecordSets
+              - route53:ListResourceRecordSets
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - ses:VerifyDomainDkim
+              - ses:DeleteIdentity
+              - ses:VerifyDomainIdentity
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - logs:*
+            Resource: arn:aws:logs:*:*:*
+      Roles:
+        - !Ref 'LambdaRole'
+  LambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Action:
+              - sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+  CFNSESProvider:
+    Type: AWS::Lambda::Function
+    DependsOn:
+      - LambdaRole
+      - LambdaPolicy
+    Properties:
+      Description: CloudFormation SES provider implementation
+      Code:
+        S3Bucket: !Sub 'binxio-public-${self:provider.region}'
+        S3Key: lambdas/cfn-ses-provider-0.2.3.zip
+      FunctionName: binxio-cfn-ses-provider-mailbot-${self:provider.stage}
+      Handler: ses.handler
+      MemorySize: 128
+      Role: !GetAtt 'LambdaRole.Arn'
+      Runtime: python2.7
+      Timeout: 30

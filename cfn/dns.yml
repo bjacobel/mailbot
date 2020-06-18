@@ -1,0 +1,23 @@
+Resources:
+  HostedZone:
+    Type: AWS::Route53::HostedZone
+    Properties:
+      Name: !Join [ "", [ "${self:custom.domain}", "." ] ]
+  MXRecords:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId:
+        Ref: HostedZone
+      Comment: MX records for recieving mail
+      Name: ${self:custom.domain}
+      Type: 'MX'
+      TTL: 3600
+      ResourceRecords:
+        - 10 inbound-smtp.${self:provider.region}.amazonaws.com
+  DKIM:
+    Type: Custom::DKIM
+    DependsOn: HostedZone
+    Properties:
+      HostedZoneId: !Ref 'HostedZone'
+      Region: ${self:provider.region}
+      ServiceToken: !Sub arn:aws:lambda:${self:provider.region}:${AWS::AccountId}:function:binxio-cfn-ses-provider-mailbot-${self:provider.stage}

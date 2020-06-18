@@ -1,0 +1,40 @@
+service: mailbot
+provider:
+  name: aws
+  region: us-east-1
+  stage: ${opt:stage, "dev"}
+  runtime: nodejs12.x
+  environment:
+    LOG_LEVEL: info
+  iamRoleStatements: ${file(./cfn/iamRoleStatements.yml)}
+  variableSyntax: "\\${((?!AWS)[ ~:a-zA-Z0-9._@'\",\\-\\/\\(\\)]+?)}"
+package:
+  individually: true
+  include:
+    - src/**
+  exclude:
+    - src/__tests__/**
+plugins:
+  - serverless-webpack
+  - serverless-dotenv-plugin
+functions:
+  receive:
+    memorySize: 128
+    handler: src/receive.default
+    events:
+      - sns:
+          arn: !Ref EmailUploadedTopic
+          topicName: mailbot-receive-${self:provider.stage}
+
+resources:
+  - ${file(./cfn/cfnSesProvider.yml)}
+  - ${file(./cfn/sesToLambda.yml)}
+  - ${file(./cfn/dns.yml)}
+
+custom:
+  domain: ${self:provider.stage}.mailbot.bjacobel.com
+  webpack:
+    packager: "yarn"
+    includeModules:
+      forceExclude:
+        - aws-sdk

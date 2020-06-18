@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fixture tests plaintext transformations formatting.txt 1`] = `
+Object {
+  "channel": "",
+  "mrkdwn": true,
+  "text": "<div dir=\\"ltr\\">Try to <i>implement</i> a <b>variety</b> of different <a href=\\"https://google.com\\">elements</a> in this email. <div><br></div><div>😎😑😇</div><div><br></div><div><font face=\\"verdana, sans-serif\\" size=\\"4\\">font </font></div><div><br></div><div><ol><li>bullet</li><li>points</li><li>there is an image below</li></ol><div><img src=\\"data:image/jpeg;base64,\\" alt=\\"IMG_3572.JPG\\" width=\\"454\\" height=\\"253\\"><br></div><div><div dir=\\"ltr\\" class=\\"gmail_signature\\" data-smartmail=\\"gmail_signature\\"><div>--</div>Brian</div></div></div></div>
+",
+  "username": "Brian Jacobel",
+}
+`;
