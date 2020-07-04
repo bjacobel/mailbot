@@ -20,7 +20,6 @@ export default (Bucket: string, Key: string): Readable => {
   // eslint-disable-next-line
   let result: Readable;
 
-  // @TODO: Bodies that are large enough to get broken over multiple stream events will be fucked up BAD by this
   const s3stream: Readable = s3
     .getObject({ Bucket, Key })
     .on("httpHeaders", (statusCode, headers) => {

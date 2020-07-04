@@ -1,5 +1,6 @@
 import * as KMS from "aws-sdk/clients/kms";
 import { SESMessage } from "aws-sdk/clients/ses";
+import { mocked } from "ts-jest/utils";
 
 import { Readable, Transform } from "stream";
 
@@ -44,6 +45,7 @@ describe("decrypt pipe", () => {
       streamSource.push(null);
     };
     message = JSON.parse(mail.Records[0].Sns.Message);
+    mocked(decryptHelper).mockClear();
   });
 
   it("returns a transform stream", (done) => {
@@ -70,6 +72,21 @@ describe("decrypt pipe", () => {
         expect.any(Function),
       );
       done();
+    });
+  });
+
+  it("handles case where the whole email fits in one stream queue slot", () => {
+    const transformer = decrypt();
+    expect(transformer).toBeInstanceOf(Transform);
+    streamSource.pipe(transformer).on("data", () => {
+      expect(decryptHelper).toHaveBeenCalledTimes(1);
+      expect(decryptHelper).toHaveBeenCalledWith(
+        expect.any(Buffer),
+        expect.any(Buffer),
+        expect.any(String),
+        secretMessage,
+        tag,
+      );
     });
   });
 
@@ -101,7 +118,7 @@ describe("decrypt pipe", () => {
     streamSource
       .pipe(transformer)
       .on("error", fail)
-      .on("close", () => {
+      .on("data", () => {
         expect(decryptHelper).toHaveBeenCalledTimes(1);
         expect(decryptHelper).toHaveBeenCalledWith(
           expect.any(Buffer),

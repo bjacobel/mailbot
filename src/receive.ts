@@ -41,6 +41,8 @@ export default async (
         .on("error", reject);
     });
 
+    log.info(emailHtml);
+
     const slackMessage = new SlackMessage(emailHtml, headerMap);
     return slackMessage.send();
   } catch (e) {
