@@ -35,6 +35,7 @@ Resources:
             Effect: Allow
             Action:
               - kms:Decrypt
+              - kms:DescribeKey
             Resource: "*"
             Principal:
               AWS: !GetAtt LambdaRole.Arn  # @TODO: Per-function roles

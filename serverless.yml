@@ -1,9 +1,9 @@
 service: uvdsa-announce-bot
 provider:
   name: aws
-  region: ${opt:region, 'us-east-1'}
+  region: us-east-1
   stage: ${opt:stage, "dev"}
-  runtime: nsolid
+  runtime: nodejs12.x
   environment:
     LOG_LEVEL: info
   iamRoleStatements: ${file(./cfn/iamRoleStatements.yml)}
@@ -18,7 +18,6 @@ package:
 plugins:
   - serverless-webpack
   - serverless-dotenv-plugin
-  - serverless-nsolid-plugin
 functions:
   receive:
     memorySize: 128
@@ -31,6 +30,7 @@ functions:
 resources:
   - ${file(./cfn/cfnSesProvider.yml)}
   - ${file(./cfn/sesToLambda.yml)}
+  - ${file(./cfn/dns.yml)}
 
 custom:
   domain: ${self:provider.stage}.uvdsa-announce-bot.bjacobel.com

@@ -1,4 +1,4 @@
-import { ChatPostMessageArguments } from "@slack/client";
+import { ChatPostMessageArguments, WebClient } from "@slack/web-api";
 import { EmailAddress, HeaderValue } from "mailparser";
 
 import log from "./utils/log";
@@ -8,10 +8,12 @@ export type Headers = Map<string, string | HeaderValue>;
 export default class SlackMessage {
   private body: string;
   private headers: Headers;
+  private slack: WebClient;
 
   constructor(emailBody: string, emailHeaders: Headers) {
     this.body = emailBody;
     this.headers = emailHeaders;
+    this.slack = new WebClient();
   }
 
   public async composeMessage(): Promise<ChatPostMessageArguments> {
@@ -26,6 +28,9 @@ export default class SlackMessage {
   public async send(): Promise<void> {
     const args = await this.composeMessage();
     log.info(JSON.stringify(args));
+    this.slack.chat.postMessage({
+      ...args,
+    });
   }
 
   public fullname(): string {
