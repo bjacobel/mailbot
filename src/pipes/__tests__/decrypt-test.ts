@@ -6,6 +6,7 @@ import { Readable, Transform } from "stream";
 import * as mail from "../../../fixtures/mail.json";
 import { HEADER } from "../../constants";
 import decrypt from "../decrypt";
+import { decrypt as decryptHelper } from "../../utils/crypto";
 import { Message } from "../download";
 
 jest.mock("aws-sdk/clients/kms");
@@ -15,6 +16,20 @@ jest.mock("../../constants", () => ({
   IS_PROD: false,
 }));
 
+const secretMessage = Buffer.from("encrypted content", "utf-8");
+const tag = Buffer.from("tagtagtagtagtagt", "utf-8");
+
+const headers = {
+  [HEADER.KEY]: "encryption key",
+  [HEADER.IV]: "initialization vector",
+  [HEADER.ALGO]: "AES/GCM/NoPadding",
+  // content includes tag at the end, so it's 16 (128/8) longer than you think
+  [HEADER.CONTENT_LEN]: String(secretMessage.length),
+  [HEADER.TAG_LEN]: String(tag.length * 8), // for some godforsaken reason this is in BITS
+  [HEADER.MATSEC]:
+    '{"aws:ses:message-id":"l9qqcrolmee63vbg1ab7p8hr7fd9a3d3lug34301","aws:ses:rule-name":"uvdsa-announce-bot-dev","aws:ses:source-account":"956518986395","kms_cmk_id":"arn:aws:kms:us-east-1:956518986395:key/1379c3ab-4633-4de2-9b66-1b5538fa28a6"}',
+};
+
 describe("decrypt pipe", () => {
   let streamSource: Readable;
   let message: SESMessage;
@@ -23,15 +38,8 @@ describe("decrypt pipe", () => {
     streamSource = new Readable({ objectMode: true });
     streamSource._read = (): void => {
       streamSource.push({
-        body: Buffer.from("encrypted content", "utf-8"),
-        headers: {
-          [HEADER.KEY]: "encryption key",
-          [HEADER.IV]: "initialization vector",
-          [HEADER.ALGO]: "AES/GCM/NoPadding",
-          [HEADER.CONTENT_LEN]: "17",
-          [HEADER.MATSEC]:
-            '{"aws:ses:message-id":"5cnusq25vfstt0cm5d48u3685n69jgnvsksal501","aws:ses:rule-name":"uvdsa-announce-bot-dev","aws:ses:source-account":"956518986395","kms_cmk_id":"arn:aws:kms:us-east-1:956518986395:key/1379c3ab-4633-4de2-9b66-1b5538fa28a6"}',
-        },
+        body: Buffer.concat([secretMessage, tag]),
+        headers,
       } as Message);
       streamSource.push(null);
     };
@@ -63,5 +71,46 @@ describe("decrypt pipe", () => {
       );
       done();
     });
+  });
+
+  it("handles case where decrypt recieves a partial body", (done) => {
+    const firstSegment = Buffer.from("encrypted c", "utf-8");
+    const secondSegment = Buffer.from("ontent", "utf-8");
+    const totalLength = String(firstSegment.length + secondSegment.length);
+
+    streamSource = new Readable({ objectMode: true });
+    streamSource._read = (): void => {
+      streamSource.push({
+        body: firstSegment,
+        headers: {
+          ...headers,
+          [HEADER.CONTENT_LEN]: totalLength,
+        },
+      } as Message);
+      streamSource.push({
+        body: Buffer.concat([secondSegment, tag]),
+        headers: {
+          ...headers,
+          [HEADER.CONTENT_LEN]: totalLength,
+        },
+      } as Message);
+      streamSource.push(null);
+    };
+
+    const transformer = decrypt();
+    streamSource
+      .pipe(transformer)
+      .on("error", fail)
+      .on("close", () => {
+        expect(decryptHelper).toHaveBeenCalledTimes(1);
+        expect(decryptHelper).toHaveBeenCalledWith(
+          expect.any(Buffer),
+          expect.any(Buffer),
+          expect.any(String),
+          secretMessage,
+          tag,
+        );
+        done();
+      });
   });
 });
