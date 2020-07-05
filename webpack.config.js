@@ -25,11 +25,18 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".ts", ".json"],
+    alias: {
+      // god webpack is fucking dumb sometimes
+      ...["entities", "libmime", "iconv-lite", "readable-stream"].reduce(
+        (prev, curr) => ({
+          ...prev,
+          [curr]: path.resolve(__dirname, `node_modules/${curr}`),
+        }),
+        {},
+      ),
+    },
   },
-  externals: {
-    "aws-sdk": "aws-sdk",
-    electron: "electron",
-  },
+  externals: [/aws\-sdk/],
   plugins: [
     new BundleAnalyzerPlugin({
       analyzerMode: process.env.ANALYZE ? "static" : "disabled",

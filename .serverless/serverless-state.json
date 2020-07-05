@@ -11,8 +11,7 @@
       "region": "us-east-1",
       "runtime": "nodejs12.x",
       "environment": {
-        "LOG_LEVEL": "info",
-        "NSOLID_LICENSE_KEY": "f8123736-cfa4-471f-b4b7-c531be857bce"
+        "LOG_LEVEL": "info"
       },
       "iamRoleStatements": [
         {
@@ -185,7 +184,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/uvdsa-announce-bot/dev/1593825138192-2020-07-04T01:12:18.192Z/receive.zip"
+                "S3Key": "serverless/uvdsa-announce-bot/dev/1593916537477-2020-07-05T02:35:37.477Z/receive.zip"
               },
               "FunctionName": "uvdsa-announce-bot-dev-receive",
               "Handler": "src/receive.default",
@@ -200,8 +199,7 @@
               "Timeout": 6,
               "Environment": {
                 "Variables": {
-                  "LOG_LEVEL": "info",
-                  "NSOLID_LICENSE_KEY": "f8123736-cfa4-471f-b4b7-c531be857bce"
+                  "LOG_LEVEL": "info"
                 }
               }
             },
@@ -210,14 +208,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "ReceiveLambdaVersionzBCXdshOgHxAHvDei1g9vr0XXqKBHfYEEND9VgpJWo": {
+          "ReceiveLambdaVersioneMEMTePLFUYO3g5ZEATbABtqolLYFXUNzsGrAGZpE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ReceiveLambdaFunction"
               },
-              "CodeSha256": "uxlEQd5RC17qGkgBpDS2VafUNE3n19dqqyAFZ5XTClk="
+              "CodeSha256": "YdoSwq4Zh4S0c80fpGjcwwN1aq3oCk7wGnB0WNrIixc="
             }
           },
           "ReceiveSnsSubscriptionUvdsaannouncebotreceivedev": {
@@ -553,7 +551,7 @@
           "ReceiveLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ReceiveLambdaVersionzBCXdshOgHxAHvDei1g9vr0XXqKBHfYEEND9VgpJWo"
+              "Ref": "ReceiveLambdaVersioneMEMTePLFUYO3g5ZEATbABtqolLYFXUNzsGrAGZpE"
             }
           }
         }
@@ -633,7 +631,6 @@
         "packager": "yarn",
         "includeModules": {
           "forceExclude": [
-            "electron",
             "aws-sdk"
           ]
         }
@@ -666,7 +663,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "ReceiveLambdaVersionzBCXdshOgHxAHvDei1g9vr0XXqKBHfYEEND9VgpJWo"
+        "versionLogicalId": "ReceiveLambdaVersioneMEMTePLFUYO3g5ZEATbABtqolLYFXUNzsGrAGZpE"
       }
     },
     "resources": {
@@ -972,7 +969,7 @@
   },
   "package": {
     "individually": true,
-    "artifactDirectoryName": "serverless/uvdsa-announce-bot/dev/1593825138192-2020-07-04T01:12:18.192Z",
+    "artifactDirectoryName": "serverless/uvdsa-announce-bot/dev/1593916537477-2020-07-05T02:35:37.477Z",
     "artifact": ""
   }
 }
