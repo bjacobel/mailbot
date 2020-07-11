@@ -29,10 +29,10 @@ describe("receive function handler", () => {
       expect(MailParser.prototype.constructor).toHaveBeenCalled();
     });
 
-    fit("logs out the email body", async () => {
+    it("logs out the email body", async () => {
       await receive(mail);
 
-      expect(log.info).toHaveBeenCalledWith("decrypted: bodybodybodybodybo");
+      expect(log.info).toHaveBeenCalledWith("decrypted: email body content");
     });
 
     it("resolves", () => {

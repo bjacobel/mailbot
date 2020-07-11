@@ -19,6 +19,7 @@ S3.prototype.getObject = jest.fn(() => {
       [HEADER.IV]: "initialization vector",
       [HEADER.ALGO]: "AES/GCM/NoPadding",
       [HEADER.CONTENT_LEN]: "18",
+      [HEADER.TAG_LEN]: "128",
       [HEADER.MATSEC]:
         '{"aws:ses:message-id":"l9qqcrolmee63vbg1ab7p8hr7fd9a3d3lug34301","aws:ses:rule-name":"uvdsa-announce-bot-dev","aws:ses:source-account":"956518986395","kms_cmk_id":"arn:aws:kms:us-east-1:956518986395:key/1379c3ab-4633-4de2-9b66-1b5538fa28a6"}',
     });
@@ -30,7 +31,9 @@ S3.prototype.createReadStream = jest.fn(
   (): Readable => {
     const readStream = new Readable();
     readStream._read = (): void => {
-      readStream.push("email body content" as GetObjectOutput["Body"]);
+      readStream.push(
+        "email body content tagtagtagtagtag" as GetObjectOutput["Body"],
+      );
       readStream.push(null);
     };
 
