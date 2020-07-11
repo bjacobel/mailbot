@@ -5,7 +5,6 @@ import { pipeline } from "stream";
 import decrypt from "./pipes/decrypt";
 import download from "./pipes/download";
 import extract from "./pipes/extract";
-import SlackMessage from "./SlackMessage";
 import log from "./utils/log";
 
 export default async (
@@ -42,9 +41,7 @@ export default async (
     });
 
     log.info(emailHtml);
-
-    const slackMessage = new SlackMessage(emailHtml, headerMap);
-    return slackMessage.send();
+    log.info(headerMap);
   } catch (e) {
     log.info(JSON.stringify(event));
     log.error(e);

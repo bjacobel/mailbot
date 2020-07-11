@@ -1,8 +1,9 @@
 import { EmailEventSNSNotification } from "aws-sdk/clients/ses";
 import { MailParser } from "mailparser";
-import * as mail from "../../fixtures/mail.json";
+import { mocked } from "ts-jest/utils";
+
+import * as mail from "../../fixtures/encrypted/long/event.json";
 import receive from "../receive";
-import SlackMessage from "../SlackMessage";
 import log from "../utils/log";
 
 jest.mock("aws-sdk/clients/kms");
@@ -17,6 +18,10 @@ jest.mock("../constants", () => ({
 }));
 
 describe("receive function handler", () => {
+  beforeEach(() => {
+    mocked(log.info).mockClear();
+  });
+
   describe("main handler", () => {
     it("calls MailParser's constructor and pipes data thru it", async () => {
       await receive(mail);
@@ -24,13 +29,14 @@ describe("receive function handler", () => {
       expect(MailParser.prototype.constructor).toHaveBeenCalled();
     });
 
-    it("creates a SlackMessage with the proper constructor args", async () => {
+    fit("logs out the email body", async () => {
       await receive(mail);
 
-      expect(SlackMessage.prototype.constructor).toHaveBeenCalledWith(
-        "decrypted: bodybodybodybodybo",
-        expect.any(Map),
-      );
+      expect(log.info).toHaveBeenCalledWith("decrypted: bodybodybodybodybo");
+    });
+
+    it("resolves", () => {
+      expect(receive(mail)).resolves.toBeDefined();
     });
   });
 

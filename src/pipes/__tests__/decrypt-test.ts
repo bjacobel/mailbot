@@ -4,7 +4,7 @@ import { mocked } from "ts-jest/utils";
 
 import { Readable, Transform } from "stream";
 
-import * as mail from "../../../fixtures/mail.json";
+import * as event from "../../../fixtures/encrypted/long/event.json";
 import { HEADER } from "../../constants";
 import decrypt from "../decrypt";
 import { decrypt as decryptHelper } from "../../utils/crypto";
@@ -44,7 +44,7 @@ describe("decrypt pipe", () => {
       } as Message);
       streamSource.push(null);
     };
-    message = JSON.parse(mail.Records[0].Sns.Message);
+    message = JSON.parse(event.Records[0].Sns.Message);
     mocked(decryptHelper).mockClear();
   });
 
