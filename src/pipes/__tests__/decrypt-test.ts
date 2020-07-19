@@ -28,7 +28,7 @@ const headers = {
   [HEADER.CONTENT_LEN]: String(secretMessage.length),
   [HEADER.TAG_LEN]: String(tag.length * 8), // for some godforsaken reason this is in BITS
   [HEADER.MATSEC]:
-    '{"aws:ses:message-id":"l9qqcrolmee63vbg1ab7p8hr7fd9a3d3lug34301","aws:ses:rule-name":"uvdsa-announce-bot-dev","aws:ses:source-account":"956518986395","kms_cmk_id":"arn:aws:kms:us-east-1:956518986395:key/1379c3ab-4633-4de2-9b66-1b5538fa28a6"}',
+    '{"aws:ses:message-id":"l9qqcrolmee63vbg1ab7p8hr7fd9a3d3lug34301","aws:ses:rule-name":"mailbot-dev","aws:ses:source-account":"956518986395","kms_cmk_id":"arn:aws:kms:us-east-1:956518986395:key/1379c3ab-4633-4de2-9b66-1b5538fa28a6"}',
 };
 
 describe("decrypt pipe", () => {
@@ -65,7 +65,7 @@ describe("decrypt pipe", () => {
           CiphertextBlob: Buffer.from("encryption key", "base64"),
           EncryptionContext: expect.objectContaining({
             "aws:ses:source-account": expect.stringMatching(/^\d{12}$/),
-            "aws:ses:rule-name": "uvdsa-announce-bot-dev",
+            "aws:ses:rule-name": "mailbot-dev",
             "aws:ses:message-id": message.mail.messageId,
           }),
         }),

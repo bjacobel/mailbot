@@ -16,11 +16,11 @@ Resources:
               KmsKeyArn: !GetAtt EmailEncryptionKey.Arn
               TopicArn: !Ref EmailUploadedTopic
         Enabled: true
-        Name: uvdsa-announce-bot-${self:provider.stage}
+        Name: mailbot-${self:provider.stage}
   EmailEncryptionKey:
     Type: AWS::KMS::Key
     Properties:
-      Description: encrypt emails in the ${self:provider.stage} uvdsa-announce-bot bucket at rest
+      Description: encrypt emails in the ${self:provider.stage} mailbot bucket at rest
       Enabled: true
       KeyPolicy:
         Version: "2012-10-17"
@@ -56,17 +56,17 @@ Resources:
   EmailEncryptionKeyAlias:
     Type: AWS::KMS::Alias
     Properties:
-      AliasName: alias/uvdsa-announce-bot-${self:provider.stage}-email-encryptor
+      AliasName: alias/mailbot-${self:provider.stage}-email-encryptor
       TargetKeyId: !Ref EmailEncryptionKey
   EmailHTMLBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: uvdsa-announce-bot-${self:provider.stage}-emails
+      BucketName: mailbot-${self:provider.stage}-emails
   EmailUploadedTopic:
     Type: AWS::SNS::Topic
     Properties:
-      DisplayName: uvdsa-announce-bot ${self:provider.stage} topic for email upload notifications
-      TopicName: uvdsa-announce-bot-receive-${self:provider.stage}
+      DisplayName: mailbot ${self:provider.stage} topic for email upload notifications
+      TopicName: mailbot-receive-${self:provider.stage}
   S3WritePermissions:
     Type: AWS::S3::BucketPolicy
     Properties:

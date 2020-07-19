@@ -1,4 +1,4 @@
-service: uvdsa-announce-bot
+service: mailbot
 provider:
   name: aws
   region: us-east-1
@@ -24,7 +24,7 @@ functions:
     events:
       - sns:
           arn: !Ref EmailUploadedTopic
-          topicName: uvdsa-announce-bot-receive-${self:provider.stage}
+          topicName: mailbot-receive-${self:provider.stage}
 
 resources:
   - ${file(./cfn/cfnSesProvider.yml)}
@@ -32,7 +32,7 @@ resources:
   - ${file(./cfn/dns.yml)}
 
 custom:
-  domain: ${self:provider.stage}.uvdsa-announce-bot.bjacobel.com
+  domain: ${self:provider.stage}.mailbot.bjacobel.com
   webpack:
     packager: "yarn"
     includeModules:

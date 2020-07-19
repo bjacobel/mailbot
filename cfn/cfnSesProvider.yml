@@ -51,7 +51,7 @@ Resources:
       Code:
         S3Bucket: !Sub 'binxio-public-${self:provider.region}'
         S3Key: lambdas/cfn-ses-provider-0.2.3.zip
-      FunctionName: binxio-cfn-ses-provider-uvdsa-announce-bot-${self:provider.stage}
+      FunctionName: binxio-cfn-ses-provider-mailbot-${self:provider.stage}
       Handler: ses.handler
       MemorySize: 128
       Role: !GetAtt 'LambdaRole.Arn'

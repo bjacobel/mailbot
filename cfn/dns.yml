@@ -20,4 +20,4 @@ Resources:
     Properties:
       HostedZoneId: !Ref 'HostedZone'
       Region: ${self:provider.region}
-      ServiceToken: !Sub arn:aws:lambda:${self:provider.region}:${AWS::AccountId}:function:binxio-cfn-ses-provider-uvdsa-announce-bot-${self:provider.stage}
+      ServiceToken: !Sub arn:aws:lambda:${self:provider.region}:${AWS::AccountId}:function:binxio-cfn-ses-provider-mailbot-${self:provider.stage}
