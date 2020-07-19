@@ -4,7 +4,7 @@ import { mocked } from "ts-jest/utils";
 
 import { Readable, Transform } from "stream";
 
-import * as event from "../../../fixtures/encrypted/long/event.json";
+import * as event from "../../../fixtures/encrypted/longEvent.json";
 import { HEADER } from "../../constants";
 import decrypt from "../decrypt";
 import { decrypt as decryptHelper } from "../../utils/crypto";

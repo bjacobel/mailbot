@@ -2,7 +2,7 @@ import { EmailEventSNSNotification } from "aws-sdk/clients/ses";
 import { MailParser } from "mailparser";
 import { mocked } from "ts-jest/utils";
 
-import * as mail from "../../fixtures/encrypted/long/event.json";
+import * as mail from "../../fixtures/encrypted/longEvent.json";
 import receive from "../receive";
 import log from "../utils/log";
 
